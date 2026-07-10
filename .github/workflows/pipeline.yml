@@ -32,7 +32,9 @@ jobs:
       # ❌ PASSO 3: IMPLEMENTE AQUI — Secrets Scanning com Gitleaks
       # Dica: use a action oficial "gitleaks/gitleaks-action@v2"
       - name: 🔑 Secrets Scanning
-        uses: gitleaks/gitleaks-action@v33  env:4    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: gitleaks/gitleaks-action@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         # SUBSTITUA o run acima pela implementação correta com "uses:"
 
       # ❌ PASSO 4: IMPLEMENTE AQUI — SAST com Semgrep
